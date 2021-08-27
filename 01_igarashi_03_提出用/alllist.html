@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Wattch</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-black">
+
+    <header id="page-header" class="fixed-nav">
+        <div class="inner flex align-item-c">
+            <h1 class="logo">Ghost Wattch</h1>
+            <div class="box flex align-item-c">
+                <nav id="gnav">
+                    <ul class="flex">
+                        <li><a href="./home.html">投稿する</a></li>
+                        <li><a href="./mylist.html">怪異マイリスト</a></li>
+                        <li><a href="./alllist.html">怪異ALLリスト</a></li>
+                        <li><span>怪異マップ</span></li>
+                    </ul>
+                </nav>
+                <div class="btn-login">
+                    <button id="login" class="send-btn">login</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="alllist"><div class="full-h-box">
+        <div class="layout inner flex">
+            <div class="side">
+                <div id="info">
+                    <p class="name"><span></span></p>
+                    <p class="email"><span></span></p>
+                </div>
+            </div>
+            <div class="content">
+                <h2 class="heading">怪異ALLリスト</h2>
+                <ul class="epi-list">
+                </ul>
+            </div>
+        </div>
+    </div></main>
+
+    <footer id="footer" class="flex single center">
+        <p class="copy">&copy; Ghost in the Wattch</p>
+    </footer>
+
+<!--/js-->
+<script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css"/>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript"  src="./js/wattch.js"></script>
+</body>
+
+</html>

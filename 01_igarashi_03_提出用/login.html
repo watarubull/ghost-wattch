@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Wattch</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-black">
+
+    <header id="page-header" class="fixed-nav">
+        <div class="inner flex align-item-c">
+            <h1 class="logo">Ghost Wattch</h1>
+            <div class="box flex align-item-c">
+                <!-- <nav id="gnav">
+                    <ul class="flex">
+                        <li><a href="#">怪異リスト</a></li>
+                        <li><a href="#">怪異マップ</a></li>
+                    </ul>
+                </nav> -->
+                <div class="btn-login">
+                    <button id="login" class="send-btn">login</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="login">
+        <div class="inner flex column align-item-c single center full-h-box">
+            <div class="input-box">
+                <h2 class="heading">login</h2>
+                <dl>
+                    <div>
+                        <dt>email</dt>
+                        <dd><input type="email" name="email" id="email"></dd>
+                    </div>
+                    <div>
+                        <dt>pass</dt>
+                        <dd><input type="password" name="pass" id="pass"></dd>
+                    </div>
+                </dl>
+                <button id="login-btn" class="send-btn">ログイン</button>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="flex single center">
+        <p class="copy">&copy; Ghost in the Wattch</p>
+    </footer>
+
+<!--/js-->
+<script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css"/>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript"  src="./js/wattch.js"></script>
+</body>
+
+</html>

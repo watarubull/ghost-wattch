@@ -1,0 +1,486 @@
+@charset "UTF-8";
+/* default
+--------------------------------------------------------*/
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  font-size: 16px;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, Meiryo, "メイリオ", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic",  Osaka, sans-serif;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 1140px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+* {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header, footer, section, article, aside, nav,
+figure, figcaption, main {
+  display: block;
+}
+
+ul, ol, dl, li, dt, dd {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+a, a:visited {
+  color: #000;
+  text-decoration: none;
+  transition: opacity .4s;
+}
+
+:focus {
+  outline: none;
+}
+
+.hover {
+  transition: opacity .4s;
+  cursor: pointer;
+}
+
+a:hover, .hover:hover {
+  opacity: 0.5;
+}
+
+/* 基本
+--------------------------------------------------------*/
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.fixed-nav + * {
+  padding-top: 60px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.flex.half > * {
+  width: 50%;
+}
+
+.flex.align-stretch {
+  align-items: stretch;
+}
+
+.flex.align-item-c {
+  align-items: center;
+}
+
+.flex.single.center {
+  justify-content: center;
+}
+
+.flex.tri {
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .flex.tri {
+    display: block;
+  }
+}
+
+.flex.tri > * {
+  width: calc((100% - 24px * 2) / 3);
+  margin-right: 24px;
+}
+
+.flex.tri > *:nth-child(3n) {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .flex.tri > *:nth-child(3n) {
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flex.tri > * {
+    width: 100%;
+    margin-right: auto;
+  }
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.inner {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+@media screen and (max-width: 1140px) {
+  .inner {
+    width: 90%;
+  }
+}
+
+.sp {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sp {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+}
+
+.posi-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.txt.txt-just {
+  text-align: justify;
+}
+
+.txt-c {
+  text-align: center;
+}
+
+.txt-c .txt + .txt {
+  margin-top: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .sec-title + .txt-c {
+    text-align: justify;
+  }
+}
+
+.txt-l {
+  font-size: 48px;
+}
+
+@media screen and (max-width: 768px) {
+  .txt-l {
+    font-size: 24px;
+  }
+}
+
+.txt-m {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .txt-m {
+    font-size: 16px;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bg-black {
+  background-color: #1a1a1a;
+  color: #FFF;
+}
+
+.bg-black a {
+  color: #FFF;
+}
+
+.bg-gray {
+  background-color: #FAFAFA;
+}
+
+.bg-gray02 {
+  background-color: #707070;
+}
+
+.btn.center {
+  text-align: center;
+}
+
+.btn > * {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 264px;
+  height: 60px;
+  padding: 0 1em;
+  font-weight: bold;
+}
+
+.btn.yellow > * {
+  color: #FFF;
+  background-color: #FFD61A;
+}
+
+* + .btn {
+  margin-top: 40px;
+}
+
+.btn-frame01 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 240px;
+  height: 60px;
+  border: solid 1px #FFF;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: ease 0.4s;
+  opacity: 1;
+}
+
+.btn-frame01:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.send-btn {
+  appearance: none;
+  display: block;
+  width: 200px;
+  height: 45px;
+  color: #FFF;
+  background-color: transparent;
+  border: solid 1px #FFF;
+  transition: ease 0.4s;
+  opacity: 1;
+}
+
+.send-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.link-btn a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 45px;
+  color: #FFF;
+  background-color: transparent;
+  border: solid 1px #FFF;
+  transition: ease 0.4s;
+  opacity: 1;
+}
+
+.link-btn a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#page-header {
+  height: 60px;
+  border-bottom: solid 1px #707070;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+}
+
+#page-header .logo {
+  font-size: 18px;
+}
+
+#page-header #gnav li {
+  margin-right: 2em;
+}
+
+.full-h-box {
+  height: calc(100vh - 120px);
+}
+
+#key .btns {
+  margin-top: 60px;
+}
+
+#key .btns li {
+  margin: 0 20px;
+}
+
+.input-box {
+  width: 480px;
+  padding: 24px;
+  border: solid 1px #FFF;
+}
+
+.input-box .heading {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.input-box dl div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-box dl div + div {
+  margin-top: 16px;
+}
+
+.input-box dl dt {
+  width: 115px;
+}
+
+.input-box dl dd {
+  width: calc(100% - 115px);
+}
+
+.input-box dl dd input {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0.2em 0.5em;
+  border: none;
+}
+
+.input-box .send-btn {
+  margin: 24px auto 0;
+}
+
+.layout {
+  padding-top: 60px;
+}
+
+.layout .side {
+  width: 240px;
+}
+
+.layout .content {
+  width: calc(100% - 280px);
+}
+
+.layout .content .heading {
+  padding-left: 0.5em;
+  margin-bottom: 2em;
+  border-left: solid 8px #FFF;
+  border-bottom: solid 1px #FFF;
+}
+
+#info {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#info *:not(:last-child) {
+  margin-right: 2em;
+}
+
+.input-area .box {
+  padding: 24px;
+  border: solid 1px #FFF;
+}
+
+.input-area .box .input-list dd + dt {
+  margin-top: 1em;
+}
+
+.input-area .box .input-list dd {
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+.input-area .box .input-list dd input, .input-area .box .input-list dd textarea {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0.2em 0.5em;
+  color: #FFF;
+  border: solid 1px #FFF;
+  background-color: transparent;
+}
+
+.input-area .box .input-list dd textarea {
+  height: 300px;
+}
+
+.input-area .box #post-btn {
+  margin-top: 24px;
+}
+
+.message {
+  padding: 24px;
+  border: solid 1px #FFF;
+}
+
+.message .link-list {
+  margin-top: 24px;
+}
+
+.epi-list li {
+  padding: 24px;
+  border: solid 1px #FFF;
+}
+
+.epi-list li + * {
+  margin-top: 24px;
+}
+
+.epi-list li .title {
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
+  border-bottom: dashed 1px #333333;
+}
+
+.epi-list li .status {
+  display: flex;
+  font-size: 12px;
+}
+
+.epi-list li .status .name::after {
+  content: " ,";
+}
+
+.epi-list li .status .date {
+  margin-left: 1em;
+}
+
+.epi-list li .episode {
+  margin-top: 1em;
+}
+/*# sourceMappingURL=style.css.map */
